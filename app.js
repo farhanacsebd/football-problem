@@ -12,10 +12,10 @@ function getInputField(increase){
 
 
     const marsCost = document.getElementById('mars-cost');
-    let marsCostText = parseInt(marsCost.innerText);
-    marsCostText = marsNumber*1200; 
-    marsCost.innerText = marsCostText;
-    
+    let marsCostTotal = parseInt(marsCost.innerText);
+    marsCostTotal = marsNumber*1200; 
+    marsCost.innerText = marsCostTotal;
+
 }
 
 document.getElementById('mars-plus').addEventListener('click',function(){
@@ -23,10 +23,10 @@ document.getElementById('mars-plus').addEventListener('click',function(){
     const marsNumber = parseInt(marsInput.value) + 1;
     marsInput.value = marsNumber; */
     getInputField(true)
-})
+});
 document.getElementById('mars-minus').addEventListener('click',function(){
    /*  const marsInput = document.getElementById('mars-input');
     const marsNumber = parseInt(marsInput.value) - 1;
     marsInput.value = marsNumber; */
     getInputField(false)
-})
+});
