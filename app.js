@@ -30,3 +30,11 @@ document.getElementById('mars-minus').addEventListener('click',function(){
     marsInput.value = marsNumber; */
     getInputField(false)
 });
+
+
+document.getElementById('moon-plus').addEventListener('click',function(){
+    const marsInput = document.getElementById('moon-input');
+    const marsNumber = parseInt(marsInput.value) + 1;
+    marsInput.value = marsNumber;
+    // getInputField(true)
+});
