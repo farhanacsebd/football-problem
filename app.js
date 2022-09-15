@@ -1,5 +1,10 @@
 document.getElementById('mars-plus').addEventListener('click',function(){
     const marsInput = document.getElementById('mars-input');
-    const marsNumber = parseInt(marsInput.value)+1;
+    const marsNumber = parseInt(marsInput.value) + 1;
+    marsInput.value = marsNumber;
+})
+document.getElementById('mars-minus').addEventListener('click',function(){
+    const marsInput = document.getElementById('mars-input');
+    const marsNumber = parseInt(marsInput.value) - 1;
     marsInput.value = marsNumber;
 })
