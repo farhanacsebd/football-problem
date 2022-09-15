@@ -1,5 +1,5 @@
 ## space-traveler:
-![](screenPin.PNG)
+![](images/screenPic.PNG)
 - A simple code added.
 ```javascript
 function getInputField(space,cost,increase){
