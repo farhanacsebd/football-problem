@@ -1,6 +1,6 @@
-function getInputField(increase){
+function getInputField(space,cost,increase){
 
-    const marsInput = document.getElementById('mars-input');
+    const marsInput = document.getElementById(space + '-input');
     let marsNumber = marsInput.value;
     if(increase){
          marsNumber = parseInt(marsInput.value) + 1;
@@ -13,7 +13,7 @@ function getInputField(increase){
 
     const marsCost = document.getElementById('mars-cost');
     let marsCostTotal = parseInt(marsCost.innerText);
-    marsCostTotal = marsNumber*1200; 
+    marsCostTotal = marsNumber * cost; 
     marsCost.innerText = marsCostTotal;
 
 }
@@ -22,19 +22,25 @@ document.getElementById('mars-plus').addEventListener('click',function(){
     /* const marsInput = document.getElementById('mars-input');
     const marsNumber = parseInt(marsInput.value) + 1;
     marsInput.value = marsNumber; */
-    getInputField(true)
+    getInputField('mars',1250,true)
 });
 document.getElementById('mars-minus').addEventListener('click',function(){
    /*  const marsInput = document.getElementById('mars-input');
     const marsNumber = parseInt(marsInput.value) - 1;
     marsInput.value = marsNumber; */
-    getInputField(false)
+    getInputField('mars',1250,false)
 });
 
 
 document.getElementById('moon-plus').addEventListener('click',function(){
-    const marsInput = document.getElementById('moon-input');
+    /* const marsInput = document.getElementById('moon-input');
     const marsNumber = parseInt(marsInput.value) + 1;
-    marsInput.value = marsNumber;
-    // getInputField(true)
+    marsInput.value = marsNumber; */
+    getInputField('moon',1000,true)
 });
+document.getElementById('moon-minus').addEventListener('click',function(){
+    /* const marsInput = document.getElementById('moon-input');
+    const marsNumber = parseInt(marsInput.value) - 1;
+    marsInput.value = marsNumber; */
+    getInputField('moon',1000,false)
+})
